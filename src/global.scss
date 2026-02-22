@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind screens;
+
+* {
+  zoom: inherit !important;
+  box-sizing: border-box !important;
+}
+
+:root {
+  font-size: 16px;
+}
+
+#root {
+  width: 400px !important;  // Back to 400px
+  min-width: 400px !important;
+  max-width: 400px !important;
+  height: auto !important;
+  min-height: 200px !important;
+  position: relative !important;
+  zoom: 1 !important;
+  transform: scale(1) !important;
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 0 !important;  // Remove padding
+}
+
+html {
+  width: 400px !important;
+  min-width: 400px !important;
+  max-width: 400px !important;
+  height: auto !important;
+  min-height: 200px !important;
+  max-height: 600px !important;
+  zoom: 1 !important;
+  transform: scale(1) !important;
+  transform-origin: 0 0 !important;
+  font-size: 14px !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden !important;
+}
+
+body {
+  width: 400px !important;
+  min-width: 400px !important;
+  max-width: 400px !important;
+  height: auto !important;
+  min-height: 200px !important;
+  max-height: 600px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  zoom: 1 !important;
+  transform: scale(1) !important;
+  
+  /* Custom scrollbar */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+  }
+  
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+html, body {
+  zoom: 1 !important;
+  transform: scale(1) !important;
+  transform-origin: 0 0 !important;
+  min-width: 400px !important;
+  max-width: 400px !important;
+  width: 400px !important;
+  font-size: 14px !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Form inputs */
+input, select, textarea {
+  font-family: Inter, Arial, sans-serif;
+  box-sizing: border-box !important;
+}
+
+/* Date/time inputs need special handling */
+input[type="datetime-local"] {
+  min-width: 0 !important;
+  font-size: 14px !important;
+}
+
+body {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Prevent any child elements from breaking layout */
+* {
+  box-sizing: border-box !important;
+  zoom: inherit !important;
+  max-width: 100% !important;
+}
+
+/* Image constraints */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain;
+}
+
+/* Button fixes */
+button {
+  zoom: 1 !important;
+  transform: scale(1) !important;
+  max-width: 100% !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+}
+
+/* Prevent website content bleeding in */
+iframe, embed, object {
+  display: none !important;
+}
+
+/* Posting Queue specific styling */
+.posting-queue {
+  max-height: 200px !important;
+  overflow-y: auto !important;
+  margin-top: 0.5rem !important;
+  padding-right: 0.25rem !important;
+}
+
+/* Ensure queue items are properly contained */
+.queue-item {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+/* Fix for checkbox containers */
+input[type="checkbox"] {
+  width: auto !important;
+  margin-right: 0.5rem !important;
+}
+
+/* Ensure proper spacing for content */
+.px-safe {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}
+
+/* Spinner animation */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Additional utility classes for the progress indicator */
+.border-3 {
+    border-width: 3px;
+}
+
+.border-t-transparent {
+    border-top-color: transparent;
+}

@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Avto.net helper",
+    "description": "",
+    "version": "1.0.0",
+    "action": {
+        "default_popup": "dist/index.html"
+    },
+    "background": {
+        "service_worker": "background/service-worker.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.avto.net/*"],
+            "js": ["scripts/main.js", "simple_inject.js"]
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "storage",
+        "alarms",
+        "downloads"
+    ],
+    "host_permissions": [
+        "https://portal.bpavto.si/*",
+        "https://*.avto.net/*"
+    ]
+}
